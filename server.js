@@ -104,6 +104,14 @@ var SampleApp = function() {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
         };
+
+        self.routes['/consoleout'] = function(req, res) {
+            console.log('hello');
+        };
+
+        self.routes['/browserout'] = function(req, res) {
+            res.send("<html><body>Helllo</body></html>");
+        };
     };
 
 
